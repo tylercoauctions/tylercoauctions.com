@@ -1,0 +1,12 @@
+# Build settings
+permalink: /:title/ # posts are symlinked from the ARC for the article feed
+source: app
+markdown: kramdown
+exclude:
+    - assets
+
+# Site settings
+url: "http://tylercoauctions.com/"
+baseurl: "http://tylercoauctions.com/"
+
+title: "Tyler &amp; Co Auction Services"
