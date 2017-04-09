@@ -18,8 +18,4 @@ webpack:
 	yarn build
 
 watch:
-ifeq ($(ENVIRONMENT), production)
-	$(error "You can't watch the production environment, yo!")
-endif
-	echo $(ENVIRONMENT)
 	$(CONCURRENTLY) 'yarn watch' 'bundle exec jekyll serve --port 4001 --incremental --watch'
