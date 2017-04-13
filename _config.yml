@@ -2,12 +2,14 @@
 permalink: /:title/ # posts are symlinked from the ARC for the article feed
 source: app
 markdown: kramdown
+keep_files:
+    - dist
 exclude:
     - assets
 
 # Site settings
-url: "http://tylercoauctions.com/"
-baseurl: "http://tylercoauctions.com/"
+url: ""
+baseurl: ""
 
 title: "Tyler &amp; Co Auction Services"
 

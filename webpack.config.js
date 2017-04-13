@@ -41,12 +41,15 @@ module.exports = {
                     use: 'css-loader!sass-loader'
                 })
             },
-            // the url-loader uses DataUrls.
-            // the file-loader emits files.
-            {test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=application/font-woff'},
-            {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=application/octet-stream'},
-            {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: 'file-loader'},
-            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=image/svg+xml'},
+            {
+                test: /\.(jpg|eot|png|gif|svg|ttf|woff|woff2|oft)(\?v=\d+\.\d+\.\d+)?$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]'
+                    }
+                }
+            },
         ]
     },
     plugins: [
